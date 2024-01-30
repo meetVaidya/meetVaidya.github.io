@@ -1,15 +1,17 @@
-const button = document.getElementById('myButton');
+const button = document.getElementById('mybutt');
 
 var positionRan;
 var inPos = String(positionRan) + 'px';
 
 function plzz(vp) {
-    positionRan = Math.floor(Math.random() * 1000);
+    positionRan = Math.floor(Math.random() * 1000) - 50;
     if (positionRan > vh) {
         plzz();
     } else if (positionRan > vw) {
         plzz();
     }
+    console.log(positionRan);
+
     return String(positionRan) + 'px';
 }
 
@@ -30,5 +32,4 @@ let vh = Math.max(
 
 button.addEventListener('click', () => {
     console.log(vw, vh);
-    console.log(positionRan);
 });
